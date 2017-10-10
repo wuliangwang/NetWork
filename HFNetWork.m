@@ -28,7 +28,6 @@
 - (void)getWithParameters:(NSDictionary *)parameters showLoading:(BOOL)showLoading success:(RequestSuccess)success{
     if (showLoading) {
         [SVProgressHUD showWithStatus:nil];
-//        [MBProgressHUD showHUDAddedTo:[HFUtil getHFSubCurrentVC].view animated:YES]
     }
     
     NSString *url = [HFNetWorkHandler getURLStringWithRequestType:_requestType];
@@ -55,8 +54,6 @@
             }
             success(data);
         }else{//连接成功，请求错误
-//            [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%ld\n%@",code,responseMSG]];
-//            [MobClick event:@"errorCode" attributes:@{@"code":[NSString stringWithFormat:@"%ld",code],@"msg":responseMSG?:@""}];
             [self responseFailWithErrorCode:code responseMSG:responseMSG];
         }
         
@@ -144,8 +141,6 @@
             }
             success(data);
         }else{//连接成功，请求错误
-//            [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%ld\n%@",code,responseMSG]];
-//            [MobClick event:@"errorCode" attributes:@{@"code":[NSString stringWithFormat:@"%ld",code],@"msg":responseMSG?:@""}];
             [self responseFailWithErrorCode:code responseMSG:responseMSG];
         }
 
@@ -183,8 +178,6 @@
             finish(0,responseMSG,responseObject);
             
         }else{//连接成功，请求错误
-//            [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%ld\n%@",code,responseMSG]];
-//            [MobClick event:@"errorCode" attributes:@{@"code":[NSString stringWithFormat:@"%ld",code],@"msg":responseMSG?:@""}];
             [self responseFailWithErrorCode:code responseMSG:responseMSG];
             finish(code,responseMSG,responseObject);
         }
@@ -233,8 +226,6 @@
             finish(0,responseMSG,responseObject);
             
         }else{//连接成功，请求错误
-//            [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%ld\n%@",code,responseMSG]];
-//            [MobClick event:@"errorCode" attributes:@{@"code":[NSString stringWithFormat:@"%ld",code],@"msg":responseMSG?:@""}];
             [self responseFailWithErrorCode:code responseMSG:responseMSG];
             finish(code,responseMSG,responseObject);
         }
