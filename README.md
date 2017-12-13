@@ -34,7 +34,25 @@
 }];
 
 ```
+3.上传图片
+```
+[[[PHNetWork alloc] initWithRequestType:RequestTypeTest] postFileWithData:@[imageData] parameters:@{@"Test":@"Test"} showLoading:YES Name:@"icon" FileName:nil MimeType:@"image.png" finish:^(NSInteger code, NSString *responseMSG, NSDictionary *responseDict) {
+           // 请求结束后的操作
+}];
+```
 ......
+
+
+#### PHNetWork.h
+![PHNetWork.h](https://github.com/wuliangwang/NetWork/blob/master/Screenshots/PHNetWork.h_image1.png)
+![PHNetWork.h](https://github.com/wuliangwang/NetWork/blob/master/Screenshots/PHNetWork.h_image2.png)
+
+#### url的拼接
+在 PHNetWorkEnum.h 添加枚举
+![在 PHNetWorkEnum.h 添加枚举](https://github.com/wuliangwang/NetWork/blob/master/Screenshots/url_1.png)
+在 PHNetWorkHandler.m 中配置url
+![在 PHNetWorkHandler.m 中配置url](https://github.com/wuliangwang/NetWork/blob/master/Screenshots/url_2.png)
+
 
 
 
