@@ -1,17 +1,18 @@
 # NetWork
-网络请求的基本封装
+基于AFN的二次封装
 
 使用
 
-1.首先先到 HFNetWorkEnum 中去添加一个网络请求的枚举
+1.首先先到 PHNetWorkEnum.h 中配置一下
 
-2.到 HFNetWorkHandler.m 中 matchURLWith 方法添加网络请求字段
+2.依赖于SVProgressHUD 的 Load加载
 
-3.到 HFNetWorkHandler.m 中 getURLStringWithRequestType 方法 配置URL 
-可根据后台要求更改
+3.DVNetFetcher 是异步文件下载 原生的API封装
 
-4.DVNetFetcher 是异步文件下载 原生的API封装
-
-5.HFNetWork 是正常的 get post 文件上传封装 基于 AFNetworking封装 其中的 load 效果使用的是 SVProgressHUD
+```
+[[[PHNetWork alloc] initWithRequestType:RequestTypeTestGet] getWithParameters:@{@"name1":@"lizhen"} showLoading:YES success:^(id data) {
+            NSLog(@"%@",data);
+        }];
+```
 
 
