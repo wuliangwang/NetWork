@@ -36,7 +36,7 @@
 ```
 3.上传图片
 ```
-[[[PHNetWork alloc] initWithRequestType:RequestTypeTest] postFileWithData:@[imageData] parameters:@{@"Test":@"Test"} showLoading:YES Name:@"icon" FileName:nil MimeType:@"image.png" finish:^(NSInteger code, NSString *responseMSG, NSDictionary *responseDict) {
+[[[PHNetWork alloc] initWithRequestType:RequestTypeTest] postFileWithData:@[imageData] parameters:@{@"Test":@"Test"} showLoading:YES Name:@"icon" FileName:nil MimeType:@"image/png" finish:^(NSInteger code, NSString *responseMSG, NSDictionary *responseDict) {
            // 请求结束后的操作
 }];
 ```
